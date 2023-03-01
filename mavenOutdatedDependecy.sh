@@ -183,6 +183,8 @@ create_pom_xml "$REPOSITORY_XML" "$AGGREGATE_DEPENDENCIES"
 # scans a project's dependencies and produces a report of those dependencies which have newer versions available
 # NOTE: It'll not scan for deprecated dependency
 OUTPUT=$(mvn versions:display-dependency-updates)
+# OUTPUT=$(mvn versions:display-dependency-updates >/dev/null 2>&1)
+
 echo "\n\n$OUTPUT\n\n"
 NEWER_DEPENDENCIES=$(echo "$OUTPUT" | sed -n '/The following dependencies in Dependencies have newer versions:/,$p')
 # echo "\n\n$NEWER_DEPENDENCIES \n\n"
