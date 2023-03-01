@@ -25,10 +25,11 @@ dependencies {
     // Default url: Sonatype
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 //    implementation 'androidx.annotation:annotation:[1.1,1.2)'
-    compileOnly "com.rudderstack.android.sdk:core:[1.5,1.7)"
 
     // Amplitude - Detected well (3.35.1)
     implementation ('com.amplitude:android-sdk:2.25.2')
+
+    compileOnly "com.rudderstack.android.sdk:core:[1.5,1.7)"
 
     // CleverTap - Detected well (4.7.4)
     implementation 'com.clevertap.android:clevertap-android-sdk:4.0.0'
