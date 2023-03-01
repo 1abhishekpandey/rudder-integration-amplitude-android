@@ -17,7 +17,7 @@ jobs:
         id: check-outdated-dependencies-and-create-issue
         uses: 1abhishekpandey/github-action-updated-dependencies-notifier@main
         with:
-          outdated-dependency-names: "com.fullstory:instrumentation-full"
+          outdated-dependency-names: "com.optimizely.ab:android-sdk"
           # outdated-dependency-names: "com.amplitude:android-sdk,
             # com.rudderstack.android.sdk:core,
             # com.clevertap.android:clevertap-android-sdk,
@@ -42,12 +42,12 @@ jobs:
             # " 
           directory: "amplitude/build.gradle"
           # library: "amplitude"
-          repository-urls: "https://maven.fullstory.com"
+          # repository-urls: "https://maven.fullstory.com"
           # repository-urls: "https://oss.sonatype.org/content/repositories/releases/, https://maven.google.com/, https://maven.singular.net/, https://maven.fullstory.com, https://s3-us-west-2.amazonaws.com/si-mobile-sdks/android/"
           # alternative-dependency-lookup: "com.singular.sdk:singular_sdk"
           # alternative-dependency-lookup-url: "https://maven.singular.net/com/singular/sdk/singular_sdk/maven-metadata.xml"
           
-          title: "fix: update FullStory SDK to the latest version"
+          title: "fix: update Optimizely SDK to the latest version"
           assignee: "desusai7"
           labels: "outdatedDependency"
           color: "FBCA04"
