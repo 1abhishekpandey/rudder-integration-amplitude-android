@@ -17,7 +17,7 @@ jobs:
         id: check-outdated-dependencies-and-create-issue
         uses: 1abhishekpandey/github-action-updated-dependencies-notifier@main
         with:
-          outdated-dependency-names: "com.moengage:moe-android-sdk"
+          outdated-dependency-names: "com.appsflyer:af-android-sdk"
           # outdated-dependency-names: "com.amplitude:android-sdk,
             # com.rudderstack.android.sdk:core,
             # com.clevertap.android:clevertap-android-sdk,
@@ -47,7 +47,7 @@ jobs:
           # alternative-dependency-lookup: "com.singular.sdk:singular_sdk"
           # alternative-dependency-lookup-url: "https://maven.singular.net/com/singular/sdk/singular_sdk/maven-metadata.xml"
           
-          title: "fix: update Amplitude SDK to the latest version"
+          title: "fix: update Appsflyer SDK to the latest version"
           assignee: "desusai7"
           labels: "outdatedDependency"
           color: "FBCA04"
