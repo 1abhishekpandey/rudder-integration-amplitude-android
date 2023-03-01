@@ -44,8 +44,8 @@ jobs:
           library: "amplitude"
           # repository-urls: "https://maven.google.com/"
           # repository-urls: "https://oss.sonatype.org/content/repositories/releases/, https://maven.google.com/, https://maven.singular.net/, https://maven.fullstory.com, https://s3-us-west-2.amazonaws.com/si-mobile-sdks/android/"
-          # alternative-dependency-lookup: "com.singular.sdk:singular_sdk"
-          # alternative-dependency-lookup-url: "https://maven.singular.net/com/singular/sdk/singular_sdk/maven-metadata.xml"
+          alternative-dependency-lookup: "com.singular.sdk:singular_sdk"
+          alternative-dependency-lookup-url: "https://maven.singular.net/com/singular/sdk/singular_sdk/maven-metadata.xml"
           
           title: "fix: update Singular SDK to the latest version"
           assignee: "desusai7"
