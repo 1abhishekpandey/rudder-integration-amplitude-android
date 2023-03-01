@@ -39,7 +39,7 @@ jobs:
             # com.adjust.sdk:adjust-android,
             # com.qualtrics:digital,
             # com.comscore:android-analytics
-            # "
+            # " 
           directory: "amplitude/build.gradle"
           # library: "amplitude"
           # repository-urls: "https://maven.google.com/"
