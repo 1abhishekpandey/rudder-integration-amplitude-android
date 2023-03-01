@@ -2,10 +2,17 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url 'https://maven.singular.net/'
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.1'
+//        classpath "com.github.ben-manes:gradle-versions-plugin:0.46.0"
     }
+}
+plugins {
+    id 'com.github.ben-manes.versions' version '0.38.0'
 }
 
 allprojects {
@@ -18,3 +25,29 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+task myTask {
+    doLast {
+        println "Hello from my task!"
+    }
+}
+//
+//task outdatedDeps(type: DependencyReportTask) {
+//    doFirst {
+//        configurations.all {
+//            resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+//        }
+//    }
+//
+//    doLast {
+//        def updates = dependencyUpdates.updates
+//        if (updates.size() > 0) {
+//            println "Outdated dependencies:"
+////            updates.each { DependencyUpdate update ->
+////                println "${update.group}:${update.name}:${update.currentVersion} -> ${update.available}"
+////            }
+//        } else {
+//            println "All dependencies are up-to-date"
+//        }
+//    }
+//}

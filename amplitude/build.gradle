@@ -22,16 +22,88 @@ android {
 
 
 dependencies {
+    // Default url: Sonatype
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.annotation:annotation:1.1.0'
-    // rudder core sdk
-    compileOnly 'com.rudderstack.android.sdk:core:1.+'
-    // Amplitude Android Sdk
-    implementation 'com.amplitude:android-sdk:2.25.2'
-    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
-    // GSON dependency
-    implementation 'com.google.code.gson:gson:2.8.6'
-    implementation 'org.apache.commons:commons-lang3:3.5'
+//    implementation 'androidx.annotation:annotation:[1.1,1.2)'
+    compileOnly "com.rudderstack.android.sdk:core:[1.5,1.7)"
+
+    // Amplitude - Detected well (3.35.1)
+    implementation ('com.amplitude:android-sdk:2.25.2')
+
+    // CleverTap - Detected well (4.7.4)
+    implementation 'com.clevertap.android:clevertap-android-sdk:4.0.0'
+
+    // Adobe Analytics - Latest version (basically deprecated)
+    implementation 'com.adobe.mobile:adobeMobileLibrary:4.18.2'
+
+    // Braze SDK - Not Found
+    implementation 'com.appboy:android-sdk-ui:23.1.0'
+
+    // Firebase and GA4 - Detected well (21.2.0)
+    implementation platform('com.google.firebase:firebase-bom:28.4.2')
+    implementation 'com.google.firebase:firebase-analytics'
+    // URL: Goolgle https://maven.google.com/
+
+    // MoEngage - Detected well (12.6.01)
+    implementation("com.moengage:moe-android-sdk:12.5.04")
+
+    // appsflyer dependencies - Detected well (6.10.0)
+    implementation 'com.appsflyer:af-android-sdk:6.9.4'
+
+    // Singular sdk - Unable to fetch latest version as their pom.xml doesn't have `latest` property.
+    // Used alternative approach to fetch the version (12.1.0)
+    implementation 'com.singular.sdk:singular_sdk:12.0.0'
+    // Url: Singular (https://maven.singular.net/)
+    // Full url to fetch metadata: "https://maven.singular.net/com/singular/sdk/singular_sdk/maven-metadata.xml"
+
+    // FullStory - Detected well (1.35.0)
+    repositories {
+        maven { url "https://maven.fullstory.com" }
+    }
+    implementation 'com.fullstory:instrumentation-full:1.18.0@aar'
+    // Url: FullStory https://maven.fullstory.com"
+
+    // Kochava - Detected well (3.11.0) but SDK name has changed post this version
+    implementation 'com.kochava.base:tracker:3.10.1'
+
+    // App center sdk - Detected well (5.0.0)
+    implementation "com.microsoft.appcenter:appcenter-analytics:4.1.0"
+
+    // optimizely dependencies - Detected well (3.13.3)
+    implementation 'com.optimizely.ab:android-sdk:3.0.0'
+
+    // bugsnag dependencies - Detected well (5.28.4)
+    implementation 'com.bugsnag:bugsnag-android:4.22.3'
+
+    // leanplum dependencies - Detected well (7.1.1)
+    implementation 'com.leanplum:leanplum-core:5.9.0'
+
+    // intercom - Detected well (14.0.5)
+    implementation 'io.intercom.android:intercom-sdk-base:9.1.2'
+
+    // branch sdk - Detected well (5.2.7)
+    implementation 'io.branch.sdk.android:library:4.3.2'
+
+    // Facebook - Detected well (16.0.0)
+    implementation 'com.facebook.android:facebook-android-sdk:11.+'
+
+    // Adjust android SDK - Detected well (4.33.3)
+    implementation 'com.adjust.sdk:adjust-android:4.30.1'
+
+    // lotame dependencies - It doesn't have maven dependency instead it is directly having the SDK
+
+    // Qualtrics - Detected well (2.9.0)
+    implementation 'com.qualtrics:digital:2.0.0'
+    // Repository URL: https://s3-us-west-2.amazonaws.com/si-mobile-sdks/android/
+
+    // comscore sdk - Detected well (6.9.2)
+    implementation "com.comscore:android-analytics:6.0.0"
+
+    // Localytics - Not implemented
+    
+
+
+    
 }
 
-apply from: './maven.gradle'
+//apply from: './maven.gradle'

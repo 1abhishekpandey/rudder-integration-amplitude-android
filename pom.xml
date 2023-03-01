@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.rudderstack.android.integration</groupId>
+    <artifactId>amplitude</artifactId>
+    <version>1.0.0</version>
+
+    <repositories>
+		<repository>
+ 			<id>id1</id>
+ 			<url>https://oss.sonatype.org/content/repositories/releases/</url>
+ 		</repository>
+		<repository>
+ 			<id>id2</id>
+ 			<url>https://maven.google.com/</url>
+ 		</repository>
+		<repository>
+ 			<id>id3</id>
+ 			<url>https://maven.singular.net/</url>
+ 		</repository>
+		<repository>
+ 			<id>id4</id>
+ 			<url>https://maven.fullstory.com</url>
+ 		</repository>
+		<repository>
+ 			<id>id5</id>
+ 			<url>https://s3-us-west-2.amazonaws.com/si-mobile-sdks/android/</url>
+ 		</repository>
+	</repositories>
+
+    <dependencies>
+        
+		<dependency>
+ 			<groupId>com.comscore</groupId>
+ 			<artifactId>android-analytics</artifactId>
+ 			<version>6.0.0</version>
+ 		</dependency>
+    </dependencies>
+</project>
