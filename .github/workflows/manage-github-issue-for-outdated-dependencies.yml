@@ -1,0 +1,40 @@
+name: Manage outdate dependencies and create issue
+
+on: 
+  # schedule:
+  #   - cron: '0 0 * * 1'
+  workflow_dispatch:
+  push:
+
+jobs:
+  check-outdated-pods:
+    runs-on: macos-latest
+    name: Check outdate pods and create issue if it doesn't exist
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check outdated pods and create issue
+        id: check-outdated-pods-and-create-issue
+        uses: 1abhishekpandey/github-action-updated-dependencies-notifier@main
+        with:
+          outdated-dependency-names: "com.rudderstack.android.sdk:core"
+          directory: "amplitude/build.gradle"
+          library: "amplitude"
+          repository-urls: "https://oss.sonatype.org/content/repositories/releases/, https://maven.google.com/, https://maven.singular.net/, https://maven.fullstory.com, https://s3-us-west-2.amazonaws.com/si-mobile-sdks/android/"
+          alternative-dependency-lookup: "com.singular.sdk:singular_sdk"
+          alternative-dependency-lookup-url: "https://maven.singular.net/com/singular/sdk/singular_sdk/maven-metadata.xml"
+          
+          title: "fix: update Amplitude SDK to the latest version"
+          assignee: "desusai7"
+          labels: "outdatedPod"
+          color: "FBCA04"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get the github issue url
+        if: steps.check-outdated-pods-and-create-issue.outputs.issue-url != ''
+        run: echo "The Github issue url is ${{ steps.check-outdated-pods-and-create-issue.outputs.issue-url }}"
+
+      - name: Outdated pod is detected
+        if: steps.check-outdated-pods-and-create-issue.outputs.has-outdated-pod == 'true'
+        run: echo "Outdated pod is detected"

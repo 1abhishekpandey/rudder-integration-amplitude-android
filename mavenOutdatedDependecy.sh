@@ -3,7 +3,7 @@
 RELATIVE_PATH="amplitude/build.gradle"
 LIBRARY="amplitude"
 
-MULTIPLE_DEPENDENCIES_INPUT="com.comscore:android-analytics"
+# MULTIPLE_DEPENDENCIES_INPUT="com.comscore:android-analytics"
 if [ -z "$MULTIPLE_DEPENDENCIES_INPUT" ]; then
     MULTIPLE_DEPENDENCIES_INPUT="com.amplitude:android-sdk,
     com.rudderstack.android.sdk:core,
