@@ -17,7 +17,7 @@ jobs:
         id: check-outdated-dependencies-and-create-issue
         uses: 1abhishekpandey/github-action-updated-dependencies-notifier@main
         with:
-          outdated-dependency-names: "com.microsoft.appcenter:appcenter-analytics"
+          outdated-dependency-names: "com.optimizely.ab:android-sdk"
           # outdated-dependency-names: "com.amplitude:android-sdk,
             # com.rudderstack.android.sdk:core,
             # com.clevertap.android:clevertap-android-sdk,
