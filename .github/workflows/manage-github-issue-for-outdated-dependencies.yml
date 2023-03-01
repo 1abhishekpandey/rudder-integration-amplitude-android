@@ -17,7 +17,7 @@ jobs:
         id: check-outdated-dependencies-and-create-issue
         uses: 1abhishekpandey/github-action-updated-dependencies-notifier@main
         with:
-          outdated-dependency-names: "com.appboy:android-sdk-ui"
+          outdated-dependency-names: "com.google.firebase:firebase-analytics"
           # outdated-dependency-names: "com.amplitude:android-sdk,
             # com.rudderstack.android.sdk:core,
             # com.clevertap.android:clevertap-android-sdk,
