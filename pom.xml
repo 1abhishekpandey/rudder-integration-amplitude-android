@@ -33,109 +33,14 @@
     <dependencies>
         
 		<dependency>
- 			<groupId>com.amplitude</groupId>
- 			<artifactId>android-sdk</artifactId>
- 			<version>2.25.2</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.rudderstack.android.sdk</groupId>
- 			<artifactId>core</artifactId>
- 			<version>[1.5,1.7)</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.clevertap.android</groupId>
- 			<artifactId>clevertap-android-sdk</artifactId>
- 			<version>4.0.0</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.adobe.mobile</groupId>
- 			<artifactId>adobeMobileLibrary</artifactId>
- 			<version>4.18.2</version>
- 		</dependency>
-		<dependency>
  			<groupId>com.appboy</groupId>
  			<artifactId>android-sdk-ui</artifactId>
  			<version>23.1.0</version>
  		</dependency>
 		<dependency>
- 			<groupId>com.google.firebase</groupId>
- 			<artifactId>firebase-analytics</artifactId>
- 			<version>19.0.2</version>
- 		</dependency>
-		<dependency>
  			<groupId>com.moengage</groupId>
  			<artifactId>moe-android-sdk</artifactId>
  			<version>12.5.04</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.appsflyer</groupId>
- 			<artifactId>af-android-sdk</artifactId>
- 			<version>6.9.4</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.singular.sdk</groupId>
- 			<artifactId>singular_sdk</artifactId>
- 			<version>12.0.0</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.fullstory</groupId>
- 			<artifactId>instrumentation-full</artifactId>
- 			<version>1.18.0@aar</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.kochava.base</groupId>
- 			<artifactId>tracker</artifactId>
- 			<version>3.10.1</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.microsoft.appcenter</groupId>
- 			<artifactId>appcenter-analytics</artifactId>
- 			<version>4.1.0</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.optimizely.ab</groupId>
- 			<artifactId>android-sdk</artifactId>
- 			<version>3.0.0</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.bugsnag</groupId>
- 			<artifactId>bugsnag-android</artifactId>
- 			<version>4.22.3</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.leanplum</groupId>
- 			<artifactId>leanplum-core</artifactId>
- 			<version>5.9.0</version>
- 		</dependency>
-		<dependency>
- 			<groupId>io.intercom.android</groupId>
- 			<artifactId>intercom-sdk-base</artifactId>
- 			<version>9.1.2</version>
- 		</dependency>
-		<dependency>
- 			<groupId>io.branch.sdk.android</groupId>
- 			<artifactId>library</artifactId>
- 			<version>4.3.2</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.facebook.android</groupId>
- 			<artifactId>facebook-android-sdk</artifactId>
- 			<version>11.+</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.adjust.sdk</groupId>
- 			<artifactId>adjust-android</artifactId>
- 			<version>4.30.1</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.qualtrics</groupId>
- 			<artifactId>digital</artifactId>
- 			<version>2.0.0</version>
- 		</dependency>
-		<dependency>
- 			<groupId>com.comscore</groupId>
- 			<artifactId>android-analytics</artifactId>
- 			<version>6.0.0</version>
  		</dependency>
     </dependencies>
 </project>

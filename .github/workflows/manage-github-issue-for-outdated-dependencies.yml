@@ -17,7 +17,7 @@ jobs:
         id: check-outdated-pods-and-create-issue
         uses: 1abhishekpandey/github-action-updated-dependencies-notifier@main
         with:
-          outdated-dependency-names: "com.amplitude:android-sdk, com.appboy:android-sdk-ui"
+          outdated-dependency-names: "com.appboy:android-sdk-ui"
           directory: "amplitude/build.gradle"
           library: "amplitude"
           repository-urls: "https://oss.sonatype.org/content/repositories/releases/, https://maven.google.com/, https://maven.singular.net/, https://maven.fullstory.com, https://s3-us-west-2.amazonaws.com/si-mobile-sdks/android/"

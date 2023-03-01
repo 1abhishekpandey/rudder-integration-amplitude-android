@@ -3,7 +3,7 @@
 RELATIVE_PATH="amplitude/build.gradle"
 LIBRARY="amplitude"
 
-# MULTIPLE_DEPENDENCIES_INPUT="com.comscore:android-analytics"
+MULTIPLE_DEPENDENCIES_INPUT="com.appboy:android-sdk-ui, com.moengage:moe-android-sdk,"
 if [ -z "$MULTIPLE_DEPENDENCIES_INPUT" ]; then
     MULTIPLE_DEPENDENCIES_INPUT="com.amplitude:android-sdk,
     com.rudderstack.android.sdk:core,
@@ -205,12 +205,28 @@ function alternative_approach() {
 # Initialize an empty body
 body=()
 
+extract_matching_line() {
+    string="$1"
+    search_string="$2"
+    while read -r line; do
+        if [[ "$line" == *"$search_string"* ]]; then
+            echo "$line"
+        fi
+    done <<<"$string"
+}
+
 # Construct body
 for individual_dependency in "${MULTIPLE_DEPENDENCIES[@]}"; do
 
-    # echo "Find individual dependency in the newer version list: $individual_dependency"
+    if [ "$individual_dependency" == "com.appboy:android-sdk-ui" ]; then
+        echo "Newer dependency: $NEWER_DEPENDENCIES \n"
+        match=$(extract_matching_line "$NEWER_DEPENDENCIES" "$individual_dependency")
+        echo "Match: $match"
+    fi
 
+    # echo "Find individual dependency in the newer version list: $individual_dependency"
     OUTDATED_DEPENDENCY=$(echo "$NEWER_DEPENDENCIES" | grep -i "$individual_dependency")
+    # OUTDATED_DEPENDENCY=$(echo "$NEWER_DEPENDENCIES" | awk -v search="$individual_dependency" '/search/{print}')
     # echo "Outdated dependency: $OUTDATED_DEPENDENCY"
 
     # Fetch current version
