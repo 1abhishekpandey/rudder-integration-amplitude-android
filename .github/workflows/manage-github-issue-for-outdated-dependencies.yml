@@ -47,7 +47,7 @@ jobs:
           
           title: "fix: update Amplitude SDK to the latest version"
           assignee: "desusai7"
-          labels: "outdatedPod"
+          labels: "outdatedDependency"
           color: "FBCA04"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
