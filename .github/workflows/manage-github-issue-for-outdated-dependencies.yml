@@ -7,14 +7,14 @@ on:
   push:
 
 jobs:
-  check-outdated-pods:
+  check-outdated-dependencies:
     runs-on: macos-latest
-    name: Check outdate pods and create issue if it doesn't exist
+    name: Check outdate dependencies and create issue if it doesn't exist
     steps:
       - uses: actions/checkout@v3
 
-      - name: Check outdated pods and create issue
-        id: check-outdated-pods-and-create-issue
+      - name: Check outdated dependencies and create issue
+        id: check-outdated-dependencies-and-create-issue
         uses: 1abhishekpandey/github-action-updated-dependencies-notifier@main
         with:
           outdated-dependency-names: "com.amplitude:android-sdk,
@@ -53,9 +53,9 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get the github issue url
-        if: steps.check-outdated-pods-and-create-issue.outputs.issue-url != ''
-        run: echo "The Github issue url is ${{ steps.check-outdated-pods-and-create-issue.outputs.issue-url }}"
+        if: steps.check-outdated-dependencies-and-create-issue.outputs.issue-url != ''
+        run: echo "The Github issue url is ${{ steps.check-outdated-dependencies-and-create-issue.outputs.issue-url }}"
 
       - name: Outdated dependency is detected
-        if: steps.check-outdated-pods-and-create-issue.outputs.has-outdated-dependencies == 'true'
+        if: steps.check-outdated-dependencies-and-create-issue.outputs.has-outdated-dependencies == 'true'
         run: echo "Outdated dependency is detected"
