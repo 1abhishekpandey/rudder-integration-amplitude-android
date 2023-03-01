@@ -47,7 +47,7 @@ jobs:
           # alternative-dependency-lookup: "com.singular.sdk:singular_sdk"
           # alternative-dependency-lookup-url: "https://maven.singular.net/com/singular/sdk/singular_sdk/maven-metadata.xml"
           
-          title: "fix: update Comscore SDK to the latest version"
+          # title: "fix: update Comscore SDK to the latest version"
           assignee: "desusai7"
           labels: "outdatedDependency"
           color: "FBCA04"
