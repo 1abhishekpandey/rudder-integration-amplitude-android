@@ -8,35 +8,10 @@
     <version>1.0.0</version>
 
     <repositories>
-		<repository>
- 			<id>id1</id>
- 			<url>https://oss.sonatype.org/content/repositories/releases/</url>
- 		</repository>
-		<repository>
- 			<id>id2</id>
- 			<url>https://maven.google.com/</url>
- 		</repository>
-		<repository>
- 			<id>id3</id>
- 			<url>https://maven.singular.net/</url>
- 		</repository>
-		<repository>
- 			<id>id4</id>
- 			<url>https://maven.fullstory.com</url>
- 		</repository>
-		<repository>
- 			<id>id5</id>
- 			<url>https://s3-us-west-2.amazonaws.com/si-mobile-sdks/android/</url>
- 		</repository>
 	</repositories>
 
     <dependencies>
         
-		<dependency>
- 			<groupId>com.appboy</groupId>
- 			<artifactId>android-sdk-ui</artifactId>
- 			<version>23.1.0</version>
- 		</dependency>
 		<dependency>
  			<groupId>com.moengage</groupId>
  			<artifactId>moe-android-sdk</artifactId>

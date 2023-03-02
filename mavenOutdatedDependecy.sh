@@ -3,7 +3,7 @@
 RELATIVE_PATH="amplitude/build.gradle"
 LIBRARY="amplitude"
 
-MULTIPLE_DEPENDENCIES_INPUT="com.appboy:android-sdk-ui, com.moengage:moe-android-sdk,"
+MULTIPLE_DEPENDENCIES_INPUT="com.moengage:moe-android-sdk,"
 if [ -z "$MULTIPLE_DEPENDENCIES_INPUT" ]; then
     MULTIPLE_DEPENDENCIES_INPUT="com.amplitude:android-sdk,
     com.rudderstack.android.sdk:core,
@@ -33,7 +33,7 @@ if [ -z "$RELATIVE_PATH" ] || [ -z "$MULTIPLE_DEPENDENCIES_INPUT" ]; then
     echo "Mandatory fields must be present."
 fi
 
-MULTIPLE_REPOSITORY_URLS="https://oss.sonatype.org/content/repositories/releases/, https://maven.google.com/, https://maven.singular.net/, https://maven.fullstory.com, https://s3-us-west-2.amazonaws.com/si-mobile-sdks/android/"
+# MULTIPLE_REPOSITORY_URLS="https://oss.sonatype.org/content/repositories/releases/, https://maven.google.com/, https://maven.singular.net/, https://maven.fullstory.com, https://s3-us-west-2.amazonaws.com/si-mobile-sdks/android/"
 
 ALTERNATIVE_SDK="com.singular.sdk:singular_sdk"
 ALTERNATIVE_URL="https://maven.singular.net/com/singular/sdk/singular_sdk/maven-metadata.xml"
